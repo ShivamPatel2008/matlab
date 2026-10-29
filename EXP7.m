@@ -1,0 +1,21 @@
+clc;
+close all;
+clear all;
+
+T = 2*pi;
+omega = 2*pi/T;
+t = linspace(0,4*pi,1000);
+
+N = 1000; 
+
+sq_wave = zeros(size(t));
+
+for n = 1:2:N
+    sq_wave = sq_wave + 4/(n*pi)*sin(n*omega*t);
+
+   
+end
+
+figure(2);
+plot(t,sq_wave);
+grid on;
